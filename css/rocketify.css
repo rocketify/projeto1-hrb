@@ -1,3 +1,7 @@
 img#default-logo{
   height: 70px; margin: 7px;
 }
+
+a#translate {
+  cursor: pointer;
+}
