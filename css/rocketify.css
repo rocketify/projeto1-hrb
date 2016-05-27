@@ -6,11 +6,16 @@ a#translate {
   cursor: pointer;
 }
 
-div.field-group-1{
+form.reservation-vertical input {
+  text-transform: uppercase;
+  color: #606060;
+}
+
+div.field-group-1 {
   margin-bottom: 10px;
 }
 
-div.field-group-2{
+div.field-group-2 {
   margin-bottom: 17px;
 }
 
