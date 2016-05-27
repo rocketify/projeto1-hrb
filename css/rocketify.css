@@ -5,3 +5,19 @@ img#default-logo{
 a#translate {
   cursor: pointer;
 }
+
+div.field-group-1{
+  margin-bottom: 10px;
+}
+
+div.field-group-2{
+  margin-bottom: 17px;
+}
+
+form.reservation-vertical div.col-xs-6:first-child {
+  padding-left: 0;
+}
+
+form.reservation-vertical div.col-xs-6:last-child {
+  padding-right: 0;
+}
