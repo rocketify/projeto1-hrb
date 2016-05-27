@@ -51,32 +51,7 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <!-- Navigation -->
-    <div class="navbar yamm navbar-default" id="sticky">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a href="index.html" class="navbar-brand">
-            <!-- Logo -->
-            <div id="logo">
-              <img id="default-logo" src="images/logo.png" alt="Hospedagem Rio Brasil">
-              <img id="retina-logo" src="images/logo-retina.png" alt="Hospedagem Rio Brasil" style="height:44px;">
-            </div>
-          </a>
-        </div>
-        <div id="navbar-collapse-grid" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="apartamentos.html">Apartamentos</a></li>
-            <li><a href="depoimentos.html">Depoimentos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a id="translate">English Version</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  <header id="header"></header>
 
   <!-- Parallax Effect -->
   <script type="text/javascript">$(document).ready(function(){$('#parallax-pagetitle').parallax("50%", -0.55);});</script>
@@ -202,6 +177,38 @@
         </div>
       </section>
 
+      <!-- Map -->
+      <script type="text/javascript">
+        jQuery(document).ready(function () {
+          if (jQuery().gMap) {
+              jQuery('#map').gMap({
+                  zoom: 15, //Integer: Level of zoom in to the map
+                  markers: [{
+                      address: "Rua Figueiredo de Magalhães, Copacabana- Rio de Janeiro/RJ", //Address of the company
+                      html: "<h4>Our hotel</h4><p>This is our hotel</p>", //Quicktip
+                      popup: false, //Boolean
+                      scrollwheel: false, //Boolean
+                      maptype: 'TERRAIN', //Choose between: 'HYBRID', 'TERRAIN', 'SATELLITE' or 'ROADMAP'.
+                      icon: {
+                          image: "images/ui/gmap-icon.png",
+                          iconsize: [42, 53],
+                          iconanchor: [12, 46]
+                      },
+
+                      controls: {
+                          panControl: false, //Boolean
+                          zoomControl: false, //Boolean
+                          mapTypeControl: true, //Boolean
+                          scaleControl: true, //Boolean
+                          streetViewControl: true, //Boolean
+                          overviewMapControl: false //Boolean
+                      }
+                  }]
+              });
+          }
+        });
+      </script>
+
       <!-- Room Content -->
       <section>
         <div class="container">
@@ -240,19 +247,19 @@
 
               <!-- Nav tabs -->
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#overview" data-toggle="tab">Informações</a></li>
+                <li class="active"><a href="#map" data-toggle="tab">Localização</a></li>
+                <li><a href="#infos" data-toggle="tab">Informações</a></li>
                 <li><a href="#facilities" data-toggle="tab">Facilidades</a></li>
-                <li><a href="#extra" data-toggle="tab">Localização</a></li>
               </ul>
 
               <!-- Tab panes -->
               <div class="tab-content">
-                <div class="tab-pane fade in active" id="overview">
+                <div class="tab-pane fade in active" id="map"></div>
+                <div class="tab-pane fade" id="infos">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. In hendrerit risus arcu, in eleifend metus dapibus varius. Nulla dolor sapien, laoreet vel tincidunt non, egestas non justo. Phasellus et mattis lectus, et gravida urna.</p>
                   <p><img src="images/tab/197x147.gif" alt="food" class="pull-right"> Donec pretium sem non tincidunt iaculis. Nunc at pharetra eros, a varius leo. Mauris id hendrerit justo. Mauris egestas magna vitae nisi ultricies semper. Nam vitae suscipit magna. Nam et felis nulla. Ut nec magna tortor. Nulla dolor sapien, laoreet vel tincidunt non, egestas non justo. </p>
                 </div>
-                <div class="tab-pane fade" id="facilities">Phasellus sodales justo felis, a vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum. Aliquam mattis velit dolor, sit amet semper erat auctor vel. Integer auctor in dui ac vehicula. Integer fermentum nunc ut arcu feugiat, nec placerat nunc tincidunt. Pellentesque in massa eu augue placerat cursus sed quis magna.</div>
-                <div class="tab-pane fade" id="extra">Aa vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum. Aliquam mattis velit dolor, sit amet semper erat auctor vel. Integer auctor in dui ac vehicula. Integer fermentum nunc ut arcu feugiat, nec placerat nunc tincidunt. Pellentesque in massa eu augue placerat cursus sed quis magna.</div>
+                <div class="tab-pane fade" id="facilities">Aa vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum. Aliquam mattis velit dolor, sit amet semper erat auctor vel. Integer auctor in dui ac vehicula. Integer fermentum nunc ut arcu feugiat, nec placerat nunc tincidunt. Pellentesque in massa eu augue placerat cursus sed quis magna.</div>
               </div>
 
             </div>
@@ -381,18 +388,7 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6"> &copy; 2014 - 2016 Hospedagem Rio Brasil </div>
-        <div class="col-xs-6 text-right">
-          <ul>
-            <li>Desenvolvido por <a href="http://www.rocketify.com.br">Rocketify</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer id="footer"></footer>
 
   <!-- Go-top Button -->
   <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
