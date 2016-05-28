@@ -1,5 +1,6 @@
 img#default-logo{
-  height: 70px; margin: 7px;
+  height: 70px;
+  margin: 7px;
 }
 
 a#translate {
@@ -25,4 +26,41 @@ form.reservation-vertical div.col-xs-6:first-child {
 
 form.reservation-vertical div.col-xs-6:last-child {
   padding-right: 0;
+}
+
+div#descricao {
+  margin-top: 35px;
+}
+
+div .alturaDetalhes {
+  height: 175px;
+}
+
+ul#rules {
+  font-size: 12px;
+  list-style-type: circle;
+}
+
+ul#rules li {
+  margin-top: 5px;
+}
+
+div #extras {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  ul#rules li {
+    margin-top: 5px !important;
+  }
+
+  .fix-line:before {
+    top: 99% !important;
+  }
+
+  footer {
+    margin-top: 0 !important;
+    font-size: 10px;
+  }
 }
