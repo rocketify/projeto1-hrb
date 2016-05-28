@@ -62,10 +62,10 @@
           <div class="row">
             <div class="col-sm-12">
               <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Contact</li>
+                <li><a href="index.html">Início</a></li>
+                <li class="active">Contato</li>
               </ol>
-              <h1>Contact</h1>
+              <h1>Contato</h1>
             </div>
           </div>
         </div>
@@ -79,26 +79,22 @@
       <!-- Contact details -->
       <section class="contact-details">
         <div class="col-md-5">
-          <h2 class="lined-heading  mt50"><span>Address</span></h2>
+          <h2 class="lined-heading  mt50"><span>Endereço</span></h2>
           <!-- Panel -->
           <div class="panel panel-default text-center">
             <div class="panel-heading">
-              <div class="panel-title"><i class="fa fa-star"></i> <strong>Starhotel</strong></div>
+              <div class="panel-title"><i class="fa fa-star"></i> <strong>Hospedagem Rio Brasil</strong></div>
             </div>
             <div class="panel-body">
               <address>
-                795 Las Palmas<br>
-                Spain, CA 94107<br>
-                <abbr title="Phone">P:</abbr> <a href="#">(123) 456-7890</a><br>
-                <abbr title="Email">E:</abbr> <a href="#">mail@example.com</a><br>
-                <abbr title="Website">W:</abbr> <a href="#">www.slashdown.nl</a><br>
+                <p>
+                  Barra da Tijuca</br>
+                  Rio de Janeiro - RJ - Brasil
+                </p>
+
+                <strong>+55 (21) 9740-16882</strong><br>
+                <strong>contato@hospedagemriobrasil.com<strong>
               </address>
-            </div>
-          </div>
-          <!-- GMap -->
-          <div class="mt30">
-            <div id="map">
-              <p>This will be replaced with the Google Map.</p>
             </div>
           </div>
         </div>
@@ -107,15 +103,17 @@
       <!-- Contact form -->
       <section id="contact-form" class="mt50">
         <div class="col-md-7">
-          <h2 class="lined-heading"><span>Send a message</span></h2>
-          <p>Pellentesque facilisis justo sed enim facilisis luctus. Duis pretium nibh at lectus tempus, vel lacinia quam adipiscing. Nullam luctus congue mattis.</p>
+          <h2 class="lined-heading"><span>Mande uma Mensagem</span></h2>
+          <p>
+            Qualquer dúvida, elogio ou reclamação entre em contato através do formulário abaixo.
+          </p>
           <div id="message"></div>
           <!-- Error message display -->
           <form class="clearfix mt50" role="form" method="post" action="php/contact.php" name="contactform" id="contactform">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name" accesskey="U"><span class="required">*</span> Your Name</label>
+                  <label for="name" accesskey="U"><span class="required">*</span> Seu Nome</label>
                   <input name="name" type="text" id="name" class="form-control" value=""/>
                 </div>
               </div>
@@ -127,42 +125,29 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="subject" accesskey="S">Subject</label>
+              <label for="subject" accesskey="S">Assunto</label>
               <select name="subject" id="subject" class="form-control">
-                <option value="Booking">Booking</option>
-                <option value="a Room">Room</option>
-                <option value="other">Other</option>
+                <option value="duvida">Dúvida</option>
+                <option value="elogio">Elogio</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="outro">Outro</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="comments" accesskey="C"><span class="required">*</span> Your message</label>
+              <label for="comments" accesskey="C"><span class="required">*</span> Sua Mensagem</label>
               <textarea name="comments" rows="9" id="comments" class="form-control"></textarea>
             </div>
             <div class="form-group">
-              <label><span class="required">*</span> Spam Filter: &nbsp;&nbsp;&nbsp;3 + 1 =</label>
+              <label><span class="required">*</span> Filtro de Spam: &nbsp;&nbsp;&nbsp;3 + 1 =</label>
               <input name="verify" type="text" id="verify" value="" class="form-control" placeholder="Please enter the outcome" />
             </div>
-            <button type="submit" class="btn  btn-lg btn-primary">Send message</button>
+            <button type="submit" class="btn  btn-lg btn-primary">Enviar Mensagem</button>
           </form>
         </div>
       </section>
 
     </div>
   </div>
-
-  <!-- Call To Action -->
-  <section id="call-to-action" class="mt100">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-8 col-xs-12">
-          <h2>This is a Call to Action that you can use for all purposes!</h2>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <a href="elements.html" class="btn btn-default btn-lg pull-right">More features</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer id="footer"></footer>
