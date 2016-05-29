@@ -1,101 +1,60 @@
 <?php
 
-if(!$_POST) exit;
+if(isset($_POST['email'])) {
 
-// Email address verification, do not edit.
-function isEmail($email) {
-	return(preg_match("/^[-_.[:alnum:]]+@((([[:alnum:]]|[[:alnum:]][[:alnum:]-]*[[:alnum:]])\.)+(ad|ae|aero|af|ag|ai|al|am|an|ao|aq|ar|arpa|as|at|au|aw|az|ba|bb|bd|be|bf|bg|bh|bi|biz|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|com|coop|cr|cs|cu|cv|cx|cy|cz|de|dj|dk|dm|do|dz|ec|edu|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gh|gi|gl|gm|gn|gov|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|in|info|int|io|iq|ir|is|it|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mil|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|museum|mv|mw|mx|my|mz|na|name|nc|ne|net|nf|ng|ni|nl|no|np|nr|nt|nu|nz|om|org|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|pro|ps|pt|pw|py|qa|re|ro|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|sk|sl|sm|sn|so|sr|st|su|sv|sy|sz|tc|td|tf|tg|th|tj|tk|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|um|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|yu|za|zm|zw)$|(([0-9][0-9]?|[0-1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\.){3}([0-9][0-9]?|[0-1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5]))$/i",$email));
-}
+    $email_to = "matheuslink1996@gmail.com";
+    $email_subject = "Hospedagem Rio Brasil - Contato";
 
-if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
+    function died($error) {
+        echo "Sentimos muito, mas não conseguimos enviar seu email devido aos seguintes erros: ";
+        echo $error."<br /><br />";
+        echo "Por favor, corrija-os e tente novamente.<br /><br />";
+        die();
+    }
 
-$name     = $_POST['name'];
-$email    = $_POST['email'];
-$phone   = $_POST['phone'];
-$subject  = $_POST['subject'];
-$comments = $_POST['comments'];
-$verify   = $_POST['verify'];
+    // validation expected data exists
+    if(!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['comments'])) {
+        died('Opa! Parece que há algum problema com seu formulário de email.');
+    }
 
-if(trim($name) == '') {
-	echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! You must enter your name.</div>';
-	exit();
-} else if(trim($email) == '') {
-	echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! Please enter a valid email address.</div>';
-	exit();
-} else if(!isEmail($email)) {
-	echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! You have enter an invalid e-mail address, try again.</div>';
-	exit();
-}
+    $name = $_POST['name']; // required
+    $email = $_POST['email']; // required
+    $subject = $_POST['subject']; // not required
+    $comments = $_POST['comments']; // required
 
-if(trim($subject) == '') {
-	echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! Please enter a subject.</div>';
-	exit();
-} else if(trim($comments) == '') {
-	echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! Please enter your message.</div>';
-	exit();
-} else if(!isset($verify) || trim($verify) == '') {
-	echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! Please enter the verification number.</div>';
-	exit();
-} else if(trim($verify) != '4') {
-	echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! The verification number you entered is incorrect.</div>';
-	exit();
-}
+    $email_message = "Mensagem enviada via hospedagemriobrasil.com.br \n\n";
 
-if(get_magic_quotes_gpc()) {
-	$comments = stripslashes($comments);
-}
+    function clean_string($string) {
+      $bad = array("content-type","bcc:","to:","cc:","href");
+      return str_replace($bad,"",$string);
+    }
 
 
-// Configuration option.
-// Enter the email address that you want to emails to be sent to.
-// Example $address = "joe.doe@yourdomain.com";
-
-//$address = "example@themeforest.net";
-$address = "example@themeforest.net";
+    $email_message .= "Nome: ".clean_string($name)."\n";
+    $email_message .= "Email: ".clean_string($email)."\n";
+    $email_message .= "Mensagem: ".clean_string($comments)."\n";
 
 
-// Configuration option.
-// i.e. The standard subject will appear as, "You've been contacted by John Doe."
-
-// Example, $e_subject = '$name . ' has contacted you via Your Website.';
-
-$e_subject = 'You\'ve been contacted by ' . $name . '.';
 
 
-// Configuration option.
-// You can change this if you feel that you need to.
-// Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $name with regards to $subject, their additional message is as follows." . PHP_EOL . PHP_EOL;
-$e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $name via email, $email";
+// create email headers
+$headers = 'From: '.$email."\r\n".
+'Reply-To: '.$email."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+?>
 
-$msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
-$headers = "From: $email" . PHP_EOL;
-$headers .= "Reply-To: $email" . PHP_EOL;
-$headers .= "MIME-Version: 1.0" . PHP_EOL;
-$headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
-$headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
-if(mail($address, $e_subject, $msg, $headers)) {
+<!-- include your own success html here -->
+<script>
+    alert("Obrigado pelo contato, estaremos respondendo o mais breve possivel!");
+    location.href="http://www.hospedagemriobrasil.com.br/contato.html";
+</script>
 
-	// Email has sent successfully, echo a success page.
-
-	echo "<h1>Email Sent Successfully!</h1>";
-	echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';	
-	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
-	echo '</div>';
-
-} else {
-
-	echo 'ERROR!';
+<?php
 
 }
+
+?>
