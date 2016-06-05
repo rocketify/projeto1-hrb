@@ -1,60 +1,42 @@
 <?php
 
-if(isset($_POST['email'])) {
-
     $email_to = "matheuslink1996@gmail.com";
     $email_subject = "Hospedagem Rio Brasil - Contato";
 
     function died($error) {
-        echo "Sentimos muito, mas não conseguimos enviar seu email devido aos seguintes erros: ";
-        echo $error."<br /><br />";
-        echo "Por favor, corrija-os e tente novamente.<br /><br />";
-        die();
+      echo "Parece que houve um erro com sua mensagem! <br /><br />";
+      echo $error."<br /><br />";
+      echo "Por favor corrija os erros e tente novamente.<br /><br />";
+      die();
     }
 
-    // validation expected data exists
-    if(!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['comments'])) {
-        died('Opa! Parece que há algum problema com seu formulário de email.');
+    if(($_POST['name'] === "") || ($_POST['email'] === "") || ($_POST['msg'] === '')) {
+      died('Sentimos muito, mas parece que há algo errado com seu formulário de mensagem.');
     }
 
-    $name = $_POST['name']; // required
-    $email = $_POST['email']; // required
-    $subject = $_POST['subject']; // not required
-    $comments = $_POST['comments']; // required
+    $nome = $_POST['name'];
+    $email = $_POST['email'];
+    $mensagem = $_POST['msg'];
 
-    $email_message = "Mensagem enviada via hospedagemriobrasil.com.br \n\n";
+    $email_message = "Mensagem enviada via hospedagemriobrasil.com \n\n";
 
     function clean_string($string) {
       $bad = array("content-type","bcc:","to:","cc:","href");
       return str_replace($bad,"",$string);
     }
 
-
-    $email_message .= "Nome: ".clean_string($name)."\n";
+    $email_message = "Nome: ".clean_string($nome)."\n";
     $email_message .= "Email: ".clean_string($email)."\n";
-    $email_message .= "Mensagem: ".clean_string($comments)."\n";
+    $email_message .= "Mensagem: ".clean_string($mensagem)."\n";
 
+    $headers = 'From: '.$email."\r\n".
+    'Reply-To: '.$email."\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+    @mail($email_to, $email_subject, $email_message, $headers);
 
+    ?>
 
-
-
-// create email headers
-$headers = 'From: '.$email."\r\n".
-'Reply-To: '.$email."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
-?>
-
-
-
-<!-- include your own success html here -->
-<script>
+  <script>
     alert("Obrigado pelo contato, estaremos respondendo o mais breve possivel!");
-    location.href="http://www.hospedagemriobrasil.com.br/contato.html";
-</script>
-
-<?php
-
-}
-
-?>
+    location.href="http://www.hospedagemriobrasil.com/contato.html";
+  </script>
