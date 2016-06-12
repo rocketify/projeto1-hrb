@@ -134,6 +134,7 @@
                 <img src="images/apartamentos/barra_mar/barra10.jpg" alt="Piscina" class="img-responsive">
               </a>
             </div>
+          </div>
         </div>
       </section>
 
@@ -209,34 +210,34 @@
 
       <!-- Map -->
       <script type="text/javascript">
-        jQuery(document).ready(function () {
-          if (jQuery().gMap) {
-              jQuery('#map').gMap({
-                  zoom: 16, //Integer: Level of zoom in to the map
-                  markers: [{
-                      address: "Av. Lúcio Costa, 2916 - Barra da Tijuca, Rio de Janeiro - RJ", //Address of the company
-                      html: "<h4>Barra Mar</h4><p>Localização Aproximada do apartamento</p>", //Quicktip
-                      popup: false, //Boolean
-                      scrollwheel: false, //Boolean
-                      maptype: 'TERRAIN', //Choose between: 'HYBRID', 'TERRAIN', 'SATELLITE' or 'ROADMAP'.
-                      icon: {
-                          image: "images/ui/gmap-icon.png",
-                          iconsize: [42, 53],
-                          iconanchor: [12, 46]
-                      },
+      jQuery(document).ready(function () {
+        if (jQuery().gMap) {
+          jQuery('#map').gMap({
+            zoom: 16, //Integer: Level of zoom in to the map
+            markers: [{
+              address: "Av. Lúcio Costa, 2916 - Barra da Tijuca, Rio de Janeiro - RJ", //Address of the company
+              html: "<h4>Barra Mar</h4><p>Localização Aproximada do apartamento</p>", //Quicktip
+              popup: false, //Boolean
+              scrollwheel: false, //Boolean
+              maptype: 'TERRAIN', //Choose between: 'HYBRID', 'TERRAIN', 'SATELLITE' or 'ROADMAP'.
+              icon: {
+                image: "images/ui/gmap-icon.png",
+                iconsize: [42, 53],
+                iconanchor: [12, 46]
+              },
 
-                      controls: {
-                          panControl: false, //Boolean
-                          zoomControl: false, //Boolean
-                          mapTypeControl: true, //Boolean
-                          scaleControl: true, //Boolean
-                          streetViewControl: true, //Boolean
-                          overviewMapControl: false //Boolean
-                      }
-                  }]
-              });
-          }
-        });
+              controls: {
+                panControl: false, //Boolean
+                zoomControl: false, //Boolean
+                mapTypeControl: true, //Boolean
+                scaleControl: true, //Boolean
+                streetViewControl: true, //Boolean
+                overviewMapControl: false //Boolean
+              }
+            }]
+          });
+        }
+      });
       </script>
 
       <!-- Room Content -->
@@ -411,7 +412,7 @@
                   </p>
                   <p>
                     *Caso o número de pessoas seja superior a capacidade do apartamento, entre em contato
-                     conosco para verificarmos a possibilidade de alocação extra.
+                    conosco para verificarmos a possibilidade de alocação extra.
                   </p>
                 </div>
               </div>
@@ -531,7 +532,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer id="footer"></footer>
 
