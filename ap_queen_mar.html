@@ -158,23 +158,27 @@
 
             <div class="form-group">
               <label for="name" accesskey="N">Nome</label>
+              <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Informe seu nome completo."> <i class="fa fa-info-circle fa-lg"> </i> </div>
               <input name="name" type="text" id="name" value="" class="form-control" />
             </div>
 
             <div class="form-group">
               <label for="email" accesskey="E">E-mail</label>
+              <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Informe um e-mail válido para realizarmos contato."> <i class="fa fa-info-circle fa-lg"> </i> </div>
               <input name="email" type="text" id="email" value="" class="form-control" />
             </div>
 
             <div class="form-group">
               <div class="col-xs-6 field-group-1">
                 <label for="telefone" accesskey="T">Telefone</label>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Informe um telefone válido."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <input name="telefone" type="text" id="telefone" value="" class="form-control" />
               </div>
 
               <div class="col-xs-6 field-group-1">
                 <div class="guests-select">
-                  <label>Nº Pessoas *</label>
+                  <label>Nº Pessoas </label>
+                  <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Em alguns apartamentos é possível adicionar uma pessoa extra."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                   <select id="guests" name="guests" class="form-control" name="">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -188,12 +192,12 @@
             <div class="form-group">
               <div class="col-xs-6 field-group-2">
                 <label for="checkin">Check-in</label>
-                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="15h ás 23h"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="15h ás 23h."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <input name="checkin" type="text" id="checkin" value="" class="form-control" />
               </div>
               <div class="col-xs-6 field-group-2">
                 <label for="checkout">Check-out</label>
-                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="7h ás 12h"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="7h ás 12h."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <input name="checkout" type="text" id="checkout" value="" class="form-control" />
               </div>
             </div>
@@ -212,7 +216,7 @@
                   zoom: 16, //Integer: Level of zoom in to the map
                   markers: [{
                       address: "Av. Lúcio Costa, 2916 - Barra da Tijuca, Rio de Janeiro - RJ", //Address of the company
-                      html: "<h4>Our hotel</h4><p>This is our hotel</p>", //Quicktip
+                      html: "<h4>Barra Mar</h4><p>Localização Aproximada do apartamento</p>", //Quicktip
                       popup: false, //Boolean
                       scrollwheel: false, //Boolean
                       maptype: 'TERRAIN', //Choose between: 'HYBRID', 'TERRAIN', 'SATELLITE' or 'ROADMAP'.

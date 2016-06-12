@@ -142,29 +142,33 @@
 
             <div class="form-group">
               <select class="hidden" name="room" id="room" disabled="disabled">
-                <option selected="selected">Clean Copacabana Mar Kit 1</option>
+                <option selected="selected">Clean Copacabana Kit 1</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="name" accesskey="N">Nome</label>
+              <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Informe seu nome completo."> <i class="fa fa-info-circle fa-lg"> </i> </div>
               <input name="name" type="text" id="name" value="" class="form-control" />
             </div>
 
             <div class="form-group">
               <label for="email" accesskey="E">E-mail</label>
+              <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Informe um e-mail válido para realizarmos contato."> <i class="fa fa-info-circle fa-lg"> </i> </div>
               <input name="email" type="text" id="email" value="" class="form-control" />
             </div>
 
             <div class="form-group">
               <div class="col-xs-6 field-group-1">
                 <label for="telefone" accesskey="T">Telefone</label>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Informe um telefone válido."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <input name="telefone" type="text" id="telefone" value="" class="form-control" />
               </div>
 
               <div class="col-xs-6 field-group-1">
                 <div class="guests-select">
-                  <label>Nº Pessoas *</label>
+                  <label>Nº Pessoas </label>
+                  <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Em alguns apartamentos é possível adicionar uma pessoa extra."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                   <select id="guests" name="guests" class="form-control" name="">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -178,12 +182,12 @@
             <div class="form-group">
               <div class="col-xs-6 field-group-2">
                 <label for="checkin">Check-in</label>
-                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="15h ás 23h"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="15h ás 23h."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <input name="checkin" type="text" id="checkin" value="" class="form-control" />
               </div>
               <div class="col-xs-6 field-group-2">
                 <label for="checkout">Check-out</label>
-                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="7h ás 12h"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="7h ás 12h."> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <input name="checkout" type="text" id="checkout" value="" class="form-control" />
               </div>
             </div>
@@ -199,10 +203,10 @@
         jQuery(document).ready(function () {
           if (jQuery().gMap) {
               jQuery('#map').gMap({
-                  zoom: 16, //Integer: Level of zoom in to the map
+                  zoom: 15, //Integer: Level of zoom in to the map
                   markers: [{
-                      address: "Av. Lúcio Costa, 2916 - Barra da Tijuca, Rio de Janeiro - RJ", //Address of the company
-                      html: "<h4>Our hotel</h4><p>This is our hotel</p>", //Quicktip
+                    address: "Rua Figueiredo de Magalhães, 226 - Copacabana - Rio de Janeiro/RJ", //Address of the company
+                      html: "<h4>Copacabana Kit 1</h4><p>Localização Aproximada do apartamento</p>", //Quicktip
                       popup: false, //Boolean
                       scrollwheel: false, //Boolean
                       maptype: 'TERRAIN', //Choose between: 'HYBRID', 'TERRAIN', 'SATELLITE' or 'ROADMAP'.
@@ -236,24 +240,24 @@
               <table class="table table-striped mt30">
                 <tbody>
                   <tr>
-                    <td><i class="fa fa-check-circle"></i>Acomoda: 3</td>
+                    <td><i class="fa fa-check-circle"></i>Acomoda: 2</td>
                     <td><i class="fa fa-check-circle"></i>Cozinha</td>
                     <td><i class="fa fa-check-circle"></i>Ar Condicionado</td>
                   </tr>
                   <tr>
                     <td><i class="fa fa-check-circle"></i>Banheiros: 1</td>
                     <td><i class="fa fa-check-circle"></i>Internet Sem fio</td>
-                    <td><i class="fa fa-check-circle"></i>TV a Cabo</td>
+                    <td><i class="fa fa-check-circle"></i>TV</td>
                   </tr>
                   <tr>
                     <td><i class="fa fa-check-circle"></i>Quartos: 1</td>
                     <td><i class="fa fa-check-circle"></i>Elevador</td>
-                    <td><i class="fa fa-check-circle"></i>Piscina</td>
+                    <td><i class="fa fa-check-circle"></i>Roupas de Cama</td>
                   </tr>
                   <tr>
                     <td><i class="fa fa-check-circle"></i>Camas: 2</td>
-                    <td><i class="fa fa-check-circle"></i>Academia</td>
-                    <td><i class="fa fa-check-circle"></i>Estacionamento Gratuito</td>
+                    <td><i class="fa fa-check-circle"></i>Porteiro</td>
+                    <td><i class="fa fa-check-circle"></i>Próximo a Pontos de Turismo</td>
                   </tr>
                 </tbody>
               </table>
@@ -262,28 +266,28 @@
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>Descrição</h4>
                   <p>
-                    Linda vista do mar e montanhas com conforto, privacidade e em ótima localização.
-                    15 km de praia de areia fofa e águas cristalinas, ótimos bares, restaurantes e baladas! Aqui você desfruta do melhor que a vida urbana e a natureza pode oferecer.
-                    Seja para Lazer ou negócios.
+                    Apartamento aconchegante, acomoda confortavelmente até 3 pessoas.
+                    Oferecemos roupa de cama/banho e cozinha completa.
+                    A poucos metros da praia de Copacabana, perto do Pão de açucar, do Corcovado,
+                    a minutos do Maracanã de metrô.
                   </p>
                 </div>
 
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>O Espaço</h4>
                   <p>
-                    O apartamento é claro, arejado, confortável, silencioso e limpo.
-                    No prédio você encontra, piscina, sauna, academia, restaurante, bar,
-                    salão de beleza, sala de jogos, quadra de tênis, cabeleireiro, lavanderia,
-                    tudo que o hóspede necessita para seu conforto.
+                    Conforto, privacidade em excelente localização. Pertinho de tudo, da linda e badalada
+                    praia de Copacabana, da praia do Leme, ótimos bares e restaurantes, belos pontos
+                    turísticos como o Pão de Açucar e o Corcovado, Lagoa Rodrigues de Freitas,
+                    Jardim Botânico.
                   </p>
                 </div>
 
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>Acesso dos Hóspedes</h4>
                   <p>
-                    Acesso a todas as comodidades como cozinha, ar condicionado, roupas de cama / banho limpas e
-                    cheirosas, piscina, sauna, academia, restaurante, bar, salão de beleza, sala de jogos,
-                    quadra de tênis, cabeleireiro, lavanderia e o melhor de tudo, praia a seus pés.
+                    Acesso a todas as comodidades como cozinha, ar condicionado, roupas de cama /
+                    banho muito limpas e cheirosas.
                   </p>
                 </div>
 
@@ -299,9 +303,10 @@
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>Indo e Vindo</h4>
                   <p>
-                    Vasto transporte público como onibus, taxis, integração com o metrô e bicicletas
-                    (vários pontos de alugueis espalhados pelo bairro), passeios a pé ou mesmo,
-                    um bom estacionamento seguro e coberto para seu carro.
+                    Você poderá explorar Copacabana a pé ou mesmo de bicicleta
+                    ( sistema de aluguel da prefeitura) e, caso queira ir ao Maracanã, ao Teatro Municipal,
+                    a confeitaria Colombo ou ao Corcovado, o bairro oferece vasto transporte público como,
+                    metrô, taxis e ônibus.
                   </p>
                 </div>
 
@@ -309,14 +314,14 @@
                   <h4>Outras Observações</h4>
                   <p>
                     Certamente você ficará muito bem hospedado no apartamento.
-                    Além do conforto, estará na melhor localização da Barra da Tijuca,
-                    no Bairro que oferece excelentes programas e os melhores shoppings da cidade.
-                    A verdadeira Miami brasileira.
+                    Além do conforto, estará em uma das melhores localizações do Rio de janeiro,
+                    no Bairro mais tradicional e um dos mais famoso do mundo.
                   </p>
                 </div>
 
               </div>
             </div>
+
             <div class="col-sm-5 mt50">
               <h2 class="lined-heading fix-line"><span>Informações</span></h2>
 
