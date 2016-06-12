@@ -7,6 +7,10 @@ a#translate {
   cursor: pointer;
 }
 
+#reservation-form .price h4 {
+  padding-right: 0!important;
+}
+
 form.reservation-vertical input {
   text-transform: uppercase;
   color: #606060;
