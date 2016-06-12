@@ -109,33 +109,43 @@
           </p>
           <div id="message"></div>
           <!-- Error message display -->
-          <form class="clearfix mt50" role="form" method="post" action="php/contact.php" name="contactform" id="contactform">
+          <form class="clearfix mt50" method="post" action="php/contact.php">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="nome" accesskey="U"><span class="required">*</span> Seu Nome</label>
-                  <input type="text" id="name" name="name" class="form-control"/>
+                  <label for="nome"><span class="required">*</span> Seu Nome</label>
+                  <input type="text" name="name" class="form-control" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="email" accesskey="E"><span class="required">*</span> E-mail</label>
-                  <input type="text" id="email" name="email" class="form-control"/>
+                  <label for="email"><span class="required">*</span> E-mail</label>
+                  <input type="email" name="email" class="form-control" required />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input type="text" name="telefone" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="subject">Assunto</label>
+                  <select name="subject" name="subject" class="form-control">
+                    <option value="DUVIDA">Dúvida</option>
+                    <option value="ELOGIO">Elogio</option>
+                    <option value="RECLAMACAO">Reclamação</option>
+                    <option value="OUTRO">Outro</option>
+                  </select>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="subject" accesskey="S">Assunto</label>
-              <select name="subject" id="subject" name="subject" class="form-control">
-                <option value="DUVIDA">Dúvida</option>
-                <option value="ELOGIO">Elogio</option>
-                <option value="RECLAMACAO">Reclamação</option>
-                <option value="OUTRO">Outro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="msg" accesskey="C"><span class="required">*</span> Sua Mensagem</label>
-              <textarea id="comments" name="comments" rows="9" class="form-control"></textarea>
+              <label for="msg"><span class="required">*</span> Sua Mensagem</label>
+              <textarea name="comments" rows="9" class="form-control" required></textarea>
             </div>
             <button type="submit" class="btn btn-lg btn-primary">Enviar Mensagem</button>
           </form>
