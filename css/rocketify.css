@@ -1,3 +1,36 @@
+.titulo-depoimentos {
+  font-size: 15px;
+  text-align: center;
+}
+
+.titulo-depoimentos a {
+  font-weight: bold;
+}
+
+.titulo-depoimentos a:hover {
+  font-weight: normal;
+}
+
+.titulo-depoimentos a#air {
+  color: red;
+}
+
+.titulo-depoimentos a#book {
+  color: blue;
+}
+
+.txt-depo1 {
+  margin: 40px auto 0 auto;
+}
+
+.txt-depo2 {
+  margin: 10px auto 20px auto;
+}
+
+div.borderDepo img {
+  border: 1px solid #606060;
+}
+
 img#default-logo{
   height: 70px;
   margin: 7px;
