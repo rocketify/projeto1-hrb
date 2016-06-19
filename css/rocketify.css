@@ -25,7 +25,7 @@ div.borderDepo img {
 }
 
 section.fundo-call {
-  background: url("../images/parallax/banner_kit.gif") no-repeat!important;
+  background: url("../images/parallax/banner_barra2.gif") no-repeat!important;
   background-size: cover!important;
 }
 
@@ -135,6 +135,10 @@ div #extras {
 }
 
 @media only screen and (max-width: 455px) {
+  .caption {
+    display: none!important;
+  }
+
   .parallax-effect #parallax-pagetitle {
     height: 125px!important;
   }
