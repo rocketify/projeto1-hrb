@@ -1,7 +1,7 @@
 <?php
 
 //email de envio email
-$para = "matheuslink1996@gmail.com";
+$para = "contato@hospedagemriobrasil.com";
 
 //campos
 
@@ -32,7 +32,7 @@ mail($para, "[".$subject."] Contato via Site", $mensagem, $headers);
 $nome2 = $_POST['name'];
 $email2 = $_POST['email'];
 
-$from2 = "matheuslink1996@gmail.com";
+$from2 = "contato@hospedagemriobrasil.com";
 
 $para2 = $email2;
 //email de envio email

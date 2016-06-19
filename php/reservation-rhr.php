@@ -12,13 +12,13 @@ $guests = $_POST['guests'];
 $checkin    = $_POST['checkin'];
 $checkout    = $_POST['checkout'];
 
-$address = "matheuslink1996@gmail.com";
+$address = "contato@hospedagemriobrasil.com";
 
-$e_subject = '[Barra Mar] Solicitação de reserva';
+$e_subject = '[RHR Vista Mar] Solicitação de reserva';
 
 $e_body = "Boas notícias! A reserva foi solicitada por $name
 
-O cliente solicitou o apartamento Barra Mar para $guests hóspedes.
+O cliente solicitou o apartamento RHR Vista Mar para $guests hóspedes.
 
 O cliente deseja se hospedar entre $checkin e $checkout"  . PHP_EOL . PHP_EOL;
 
@@ -54,7 +54,7 @@ $guests2 = $_POST['guests'];
 $checkin2    = $_POST['checkin'];
 $checkout2    = $_POST['checkout'];
 
-$from2 = "matheuslink1996@gmail.com";
+$from2 = "contato@hospedagemriobrasil.com";
 
 $para2 = $email2;
 
@@ -68,7 +68,7 @@ Iremos analisá-la e estaremos entrando em contato o mais rápido possível.
 
 Aproveite para conferir seus dados:
 
-Apartamento: Barra Mar
+Apartamento: RHR Vista Mar
 Telefone: $telefone2
 Hóspedes: $guests2
 Checkin: $checkin2
@@ -83,7 +83,7 @@ We will analyze it and we will be getting in touch as soon as possible.
 
 Take the opportunity to check your data:
 
-Apartment: Barra Mar
+Apartment: RHR Vista Mar
 Phone: $telefone2
 Guests: $guests2
 Checkin: $checkin2
