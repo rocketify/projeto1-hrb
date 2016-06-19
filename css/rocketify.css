@@ -4,19 +4,12 @@
 }
 
 .titulo-depoimentos a {
-  font-weight: bold;
+  color: red;
+  font-weight: 600;
 }
 
 .titulo-depoimentos a:hover {
-  font-weight: normal;
-}
-
-.titulo-depoimentos a#air {
-  color: red;
-}
-
-.titulo-depoimentos a#book {
-  color: blue;
+  font-weight: 700;
 }
 
 .txt-depo1 {
