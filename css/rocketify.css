@@ -24,6 +24,11 @@ div.borderDepo img {
   border: 1px solid #606060;
 }
 
+section.fundo-call {
+  background: url("../images/parallax/banner_kit.gif") no-repeat!important;
+  background-size: cover!important;
+}
+
 img#default-logo{
   height: 70px;
   margin: 7px;
