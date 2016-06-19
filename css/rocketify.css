@@ -98,6 +98,15 @@ div #extras {
     top: 99% !important;
   }
 
+  .titulo-depoimentos {
+    font-size: 13px;
+  }
+
+  #call-to-action {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
   footer {
     margin-top: 0 !important;
     font-size: 10px;
