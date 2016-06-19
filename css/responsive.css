@@ -27,7 +27,12 @@
    #retina-logo{
      height: 60px !important; margin: 12px;
    }
-
+   .airbnb-responsive{
+     display: none;
+   }
+   .copy-responsive{
+     display: none;
+   }
   .boxed .navbar {
   	max-width: 1170px;
   }
@@ -181,6 +186,21 @@
 /* Extra small devices(phones)
 -------------------------------------------------- */
 @media (max-width: 767px) {
+  .airbnb{
+    display: none;
+  }
+  .airbnb-responsive{
+    display: block;
+  }
+  .airbnb-responsive img{
+    width: 20px; float: left; position: relative; top: 4px;
+  }
+  .copy{
+      display: none;
+  }
+  .copy-responsive{
+    display: block;
+  }
   body {
   	font-size: 13px;
   }
