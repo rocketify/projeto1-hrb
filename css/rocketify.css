@@ -107,6 +107,10 @@ div #extras {
     margin-bottom: 0;
   }
 
+  section.lista-apartamentos {
+    margin-bottom: 10%;
+  }
+
   footer {
     margin-top: 0 !important;
     font-size: 10px;
