@@ -16,13 +16,17 @@ $address = "contato@hospedagemriobrasil.com";
 
 $e_subject = '[Copacabana 2 Bedroom] Solicitação de reserva';
 
-$e_body = "Boas notícias! A reserva foi solicitada por $name
+$e_body = "Boas notícias! Você recebeu uma solicitação de reserva para o apartamento Copacabana 2 Bedroom.
 
-O cliente solicitou o apartamento Copacabana 2 Bedroom para $guests hóspedes.
+São $guests para se hospedar entre $checkin e $checkout." . PHP_EOL . PHP_EOL;
 
-O cliente deseja se hospedar entre $checkin e $checkout"  . PHP_EOL . PHP_EOL;
+$e_reply = "Dados do cliente para contato:
 
-$e_reply = "Você poderá entrar em contato com o cliente pelo, $email ou $telefone, para completar a reserva.";
+Nome: $name
+E-mail: $email
+Telefone: $telefone
+
+Entre em contato com ele para fechar negócio.";
 
 $msg = wordwrap( $e_body . $e_reply, 70 );
 
@@ -37,7 +41,7 @@ if(mail($address, $e_subject, $msg, $headers)) {
 	// Email has sent successfully, echo a success page.
 
 	echo "<script>alert('Solicitação de reserva enviada!');</script>";
-	echo "<script>window.location.assign('../ap_barra_mar.html');</script>";
+	echo "<script>window.location.assign('../ap_copacabana_2_bedroom.html');</script>";
 
 } else {
 
@@ -64,7 +68,8 @@ $e_body2 = "Olá, $nome2.
 
 Recebemos sua solicitação de reserva.
 
-Iremos analisá-la e estaremos entrando em contato o mais rápido possível.
+Iremos analisá-la retornamos contato o mais rápido
+possível.
 
 Aproveite para conferir seus dados:
 
