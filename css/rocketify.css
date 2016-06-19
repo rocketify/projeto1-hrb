@@ -88,8 +88,22 @@ div #extras {
   margin-top: 15px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px){
   /*Tamanho box/imagem slider apartamentos*/
+  #owl-standard,
+  .owl-item,
+  img.img-responsive {
+    height: 481px!important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  /*Tamanho box/imagem slider apartamentos*/
+  #owl-standard,
+  .owl-item,
+  img.img-responsive {
+    height: 506px!important;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1169px) {
