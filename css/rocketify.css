@@ -107,6 +107,10 @@ div #extras {
     margin-bottom: 0;
   }
 
+  section#contact-form {
+    margin-bottom: 10%;
+  }
+
   section.lista-apartamentos {
     margin-bottom: 10%;
   }
