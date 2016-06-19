@@ -104,7 +104,7 @@ div #extras {
 
   #call-to-action {
     margin-top: 50px;
-    margin-bottom: 0;
+    margin-bottom: 0!important;
   }
 
   section#contact-form {
