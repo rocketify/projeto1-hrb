@@ -242,3 +242,7 @@ div #extras {
   .pp_details { width: 100%!important; padding-left: 3%; padding-right: 4%; padding-top: 20px; padding-bottom: 20px; background-color: #fff; margin-top: -2px!important; }
   a.pp_close { right: 10px!important; top: 10px!important; }
 }
+
+.social-rodape{
+  font-size: 18px; margin-left: 10px; position: relative; top: 2px;
+}
