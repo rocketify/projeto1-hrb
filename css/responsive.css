@@ -30,9 +30,6 @@
    .airbnb-responsive{
      display: none;
    }
-   .copy-responsive{
-     display: none;
-   }
   .boxed .navbar {
   	max-width: 1170px;
   }
@@ -40,6 +37,7 @@
   .boxed .navbar .container {
   	margin: 0;
   }
+
 }
 /* Medium Devices
 -------------------------------------------------- */
@@ -53,7 +51,7 @@
   }
   .room-thumb, .room-thumb .mask {
   	width: 100%;
-  	height: 224px;
+  	height: 255px;
   }
   .room-thumb .main h5 {
   	padding: 0 10px;
@@ -95,6 +93,9 @@
 /* Small Devices (tablets)
 -------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 991px) {
+  .box-icon p{
+    font-size: 11px;
+  }
   /* Navbar */
   #retina-logo{
     height: 60px !important; margin: 12px;
@@ -105,8 +106,7 @@
   }
 
   .navbar-nav > li > a {
-    padding: 32px 6px !important;
-    font-size: 11px;
+    padding: 32px 12px !important;
   }
 
   header #logo, .navbar.shrink #logo {
@@ -186,6 +186,15 @@
 /* Extra small devices(phones)
 -------------------------------------------------- */
 @media (max-width: 767px) {
+  .box-icon p{
+    padding: 0px 50px 40px 50px;
+  }
+  .copy{
+    margin-top: -8px;
+  }
+  .copy span{
+    display: none;
+  }
   .airbnb{
     display: none;
   }
@@ -194,12 +203,6 @@
   }
   .airbnb-responsive img{
     width: 20px; float: left; position: relative; top: 4px;
-  }
-  .copy{
-      display: none;
-  }
-  .copy-responsive{
-    display: block;
   }
   body {
   	font-size: 13px;
