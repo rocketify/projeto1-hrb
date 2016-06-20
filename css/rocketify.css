@@ -246,3 +246,7 @@ div #extras {
 .social-rodape{
   font-size: 18px; margin-left: 10px; position: relative; top: 2px;
 }
+
+.copy, .rocketify{
+  padding-top: 5px;
+}
