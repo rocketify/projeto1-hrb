@@ -90,18 +90,14 @@ div #extras {
 
 @media only screen and (min-width: 1200px){
   /*Tamanho box/imagem slider apartamentos*/
-  #owl-standard,
-  .owl-item,
-  img.img-responsive {
+  div#owl-standard div.owl-wrapper-outer div.owl-wrapper div.owl-item div.item a img.img-responsive {
     height: 481px!important;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px){
   /*Tamanho box/imagem slider apartamentos*/
-  #owl-standard,
-  .owl-item,
-  img.img-responsive {
+  div#owl-standard div.owl-wrapper-outer div.owl-wrapper div.owl-item div.item a img.img-responsive {
     height: 506px!important;
   }
 }
@@ -215,6 +211,17 @@ div #extras {
     padding: 10px 0 0 5px!important;
   }
 
+  #apsIndex {
+    margin-top: 50px!important;  
+  }
+
+  #parallaxIndex {
+    margin-top: 50px!important;
+  }
+
+  #galeriaCustom {
+    margin-bottom: 40px;
+  }
 }
 
 /* prettyPhoto styling for medium screens  - below 1169px width */
