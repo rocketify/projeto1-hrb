@@ -139,6 +139,9 @@
   .room-thumb .main h5 {
   	padding: 0 10px;
   	font-size: 12px;
+    overflow: hidden;
+    width: 155px;
+    white-space: nowrap;
   }
   .room-thumb .main .price {
   	padding: 10px;
