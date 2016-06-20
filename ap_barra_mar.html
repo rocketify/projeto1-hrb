@@ -198,38 +198,13 @@
               <div class="col-xs-6 field-group-2">
                 <label for="checkout">Check-out</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="7h ás 12h."> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                <input name="checkout" type="text" id="checkout" value="" class="form-control" required/>
+                <input name="checkout" type="text" id="checkout" dataNoite="3" value="" class="form-control" required/>
               </div>
             </div>
 
             <!-- Script Check In Check Out -->
             <script type="text/javascript">
-                $("#checkin").on("change",function(){
-                  var checkout = $("#checkout");
-                  checkout.val("");
 
-                  //Quantidade miníma de noites
-                  var minimoNoites = 3;
-
-                  var dataCheckin = $(this).val();
-                  var dia = dataCheckin[0] + dataCheckin[1];
-                  var mes = dataCheckin[3] + dataCheckin[4];
-                  var ano = dataCheckin[6] + dataCheckin[7] + dataCheckin[8] + dataCheckin[9];
-
-                  var novaData = new Date(ano + "-" + mes + "-" + dia);
-                  novaData.setDate(novaData.getDate() + minimoNoites + 1);
-                  novaData.setMonth(novaData.getMonth() + 1);
-                  var dataFinal = (novaData.getFullYear() + "-" + novaData.getMonth() + "-" + novaData.getDate());
-                  var novoDia = novaData.getDate();
-
-                  checkout.datepicker({
-                    changeYear: true,
-                    minDate: +novoDia
-                  });
-
-                  //checkout.prop("min", dataFinal);
-                  //console.log(checkout.prop("min"));
-                });
             </script>
 
             <button type="submit" class="btn btn-primary btn-block">Solicitar Reserva</button>
