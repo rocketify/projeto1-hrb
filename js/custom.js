@@ -285,20 +285,14 @@ jQuery(document).ready(function () {
   var novaData = null;
 
   function setMinDatetoCheckin() {
-
     var minimoNoites = $("#checkout").attr("dataNoite");
-    console.log(minimoNoites);
     var dataCheckin = $("#checkin").val();
     var dia = dataCheckin[0] + dataCheckin[1];
     var mes = dataCheckin[3] + dataCheckin[4];
     var ano = dataCheckin[6] + dataCheckin[7] + dataCheckin[8] + dataCheckin[9];
 
-    console.log(dataCheckin);
     novaData = new Date(ano + "-" + mes + "-" + dia);
-    novaData.setDate(novaData.getDate() + minimoNoites + 1);
-    novaData.setMonth(novaData.getMonth() + 1);
-
-    console.log(novaData);
+    novaData.setDate(novaData.getDate() + parseInt(minimoNoites) + 1);
   }
 
   //jQueryUI - Datepicker
@@ -318,7 +312,7 @@ jQuery(document).ready(function () {
         if (a) {
           setMinDatetoCheckin();
         }
-        
+
         if (a) return {
           minDate: novaData
         }
