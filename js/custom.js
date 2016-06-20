@@ -277,18 +277,23 @@ jQuery(document).ready(function () {
   }
 
   // Reservation Form
-  var novaData = null;
-  var minimoNoites = $("#checkout").prop("dataNoite");
-
-  function setMinDatetoCheckin(minimoNoites) {
+  $("#checkin").on("change", function(){
     var checkout = $("#checkout");
     checkout.val("");
+  });
 
+  var novaData = null;
+
+  function setMinDatetoCheckin() {
+
+    var minimoNoites = $("#checkout").attr("dataNoite");
+    console.log(minimoNoites);
     var dataCheckin = $("#checkin").val();
     var dia = dataCheckin[0] + dataCheckin[1];
     var mes = dataCheckin[3] + dataCheckin[4];
     var ano = dataCheckin[6] + dataCheckin[7] + dataCheckin[8] + dataCheckin[9];
 
+    console.log(dataCheckin);
     novaData = new Date(ano + "-" + mes + "-" + dia);
     novaData.setDate(novaData.getDate() + minimoNoites + 1);
     novaData.setMonth(novaData.getMonth() + 1);
@@ -310,7 +315,10 @@ jQuery(document).ready(function () {
       minDate: novaData,
       beforeShow: function () {
         var a = jQuery("#checkin").datepicker('getDate');
-        setMinDatetoCheckin(minimoNoites);
+        if (a) {
+          setMinDatetoCheckin();
+        }
+        
         if (a) return {
           minDate: novaData
         }
