@@ -178,7 +178,7 @@ div #extras {
     font-size: 15px;
   }
 
-  td {
+  table.table-striped tr td {
     display: inline-block;
     width: 50%;
     text-align: center;
@@ -186,7 +186,7 @@ div #extras {
     border: 1px solid #F0F0F0;
   }
 
-  td:first-child {
+  table.table-striped tr td:first-child {
     display: block;
     width: 100%;
     background-color: rgba(90, 186, 198, 0.05)!important;
@@ -212,7 +212,7 @@ div #extras {
   }
 
   #apsIndex {
-    margin-top: 50px!important;  
+    margin-top: 50px!important;
   }
 
   #parallaxIndex {
