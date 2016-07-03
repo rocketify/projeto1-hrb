@@ -3,7 +3,7 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a href="index.html" class="navbar-brand">
+      <a id="linkLogo" href="index.html" class="navbar-brand">
         <!-- Logo -->
         <div id="logo">
           <img id="default-logo" src="images/logo.png" alt="Hospedagem Rio Brasil">
@@ -13,22 +13,169 @@
     </div>
     <div id="navbar-collapse-grid" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="apartamentos.html">Apartamentos</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
+        <li><a id="index" href="index.html">Início</a></li>
+        <li><a id="aps" href="apartamentos.html">Apartamentos</a></li>
+        <li><a id="depo" href="depoimentos.html">Depoimentos</a></li>
         <li><a href="https://www.airbnb.com.br/s?host_id=8996394&s_tag=8rS1EfPu" target="_blank">On Airbnb</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <!--<li><a id="translate">English Version</a></li>-->
+        <li><a id="contato" href="contato.html">Contato</a></li>
+        <li><a id="translate">Eng</a></li>
       </ul>
     </div>
   </div>
 </div>
 
 <script type="text/javascript">
+$(document).ready(function() {
+  //Declração de variáveis com os objetos JQuery dos links:
+  var linkLogo = $("#linkLogo");
+  var index = $("#index");
+  var aps = $("#aps");
+  var depo = $("#depo");
+  var contato = $("#contato");
+
+  //Testa Linguagem e atribui novo texto e destino
+  if (getCookie("language") === "pt" || getCookie("language") === undefined || getCookie("language") === null) {
+    linkLogo.prop("href", "index.html");
+
+    index.text("Início");
+    index.prop("href", "index.html");
+
+    aps.text("Apartamentos");
+    aps.prop("href", "apartamentos.html");
+
+    depo.text("Depoimentos");
+    depo.prop("href", "depoimentos.html");
+
+    contato.text("Contato");
+    contato.prop("href", "contato.html");
+
+    $("#translate").text("Eng");
+  }
+  else {
+    linkLogo.prop("href", "indexEng.html");
+
+    index.text("Home");
+    index.prop("href", "indexEng.html");
+
+    aps.text("Apartaments");
+    aps.prop("href", "apartamentosEng.html");
+
+    depo.text("Comments");
+    depo.prop("href", "depoimentosEng.html");
+
+    contato.text("Contact");
+    contato.prop("href", "contatoEng.html");
+
+    $("#translate").text("PT-BR");
+  }
+
+  //Criam cookies de localização, quando clicados:
+  linkLogo.on("click", function() {
+    setCookie("urlLocation", "index", 1);
+  });
+
+  index.on("click", function() {
+    setCookie("urlLocation", "index", 1);
+  });
+
+  aps.on("click", function() {
+    setCookie("urlLocation", "aps", 1);
+  });
+
+  depo.on("click", function() {
+    setCookie("urlLocation", "depo", 1);
+  });
+
+  contato.on("click", function() {
+    setCookie("urlLocation", "contato", 1);
+  });
+
+  //Eventos q ue ocorrem ao clicar no btn translate
+  $("#translate").on("click", function(){
+    var translate = $(this);
+    var language = getCookie("language");
+    var urlLocation = getCookie("urlLocation");
+
+    if (language === "pt" || language === undefined || language === null) {
+      setCookie("language", "eng", 1);
+      language = getCookie("language");
+    }
+    else {
+      setCookie("language", "pt", 1);
+      language = getCookie("language");
+    }
+
+
+    //Verifica Local, language e redireciona:
+    if (urlLocation === null || urlLocation === undefined || urlLocation === "index") {
+      if (language === "eng" || language === undefined || language === null) {
+        location.href = "indexEng.html";
+      }
+      else {
+        location.href = "index.html";
+      }
+    }
+
+    if (urlLocation === "aps") {
+      if (language === "eng") {
+        location.href = "apartamentosEng.html";
+      }
+      else {
+        location.href = "apartamentos.html";
+      }
+    }
+
+    if (urlLocation === "depo") {
+      if (language === "eng") {
+        location.href = "depoimentosEng.html";
+      }
+      else {
+        location.href = "depoimentos.html";
+      }
+    }
+
+    if (urlLocation === "contato") {
+      if (language === "eng") {
+        location.href = "contatoEng.html";
+      }
+      else {
+        location.href = "contato.html";
+      }
+    }
+
+  });
+
+});
+
 // Sticky Navigation
 if (jQuery().sticky) {
   jQuery(".navbar").sticky({
     topSpacing: 0,
   });;
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1);
+    if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+  }
+  return null;
+}
+
+function deleteCookie(name) {
+  if (getCookie(name)) {
+    document.cookie = name + "=" +
+    "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+  }
 }
 </script>
