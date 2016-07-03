@@ -143,7 +143,7 @@
   }
 
   .room-thumb .main h5.word-wrap{
-    margin-top: 3px;  
+    margin-top: 3px;
   }
 
   .room-thumb .main .price {
@@ -192,6 +192,9 @@
 /* Extra small devices(phones)
 -------------------------------------------------- */
 @media (max-width: 767px) {
+  .fb-share-button{
+    top: 3px;
+  }
   .social-rodape{
     font-size: 19px; top: 3px;
   }
