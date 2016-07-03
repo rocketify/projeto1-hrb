@@ -18,7 +18,7 @@
         <li><a id="depo" href="depoimentos.html">Depoimentos</a></li>
         <li><a href="https://www.airbnb.com.br/s?host_id=8996394&s_tag=8rS1EfPu" target="_blank">On Airbnb</a></li>
         <li><a id="contato" href="contato.html">Contato</a></li>
-        <li><a id="translate">Eng</a></li>
+        <li><a id="translate">Engish</a></li>
       </ul>
     </div>
   </div>
@@ -49,7 +49,7 @@ $(document).ready(function() {
     contato.text("Contato");
     contato.prop("href", "contato.html");
 
-    $("#translate").text("Eng");
+    $("#translate").text("English");
   }
   else {
     linkLogo.prop("href", "indexEng.html");
@@ -57,7 +57,7 @@ $(document).ready(function() {
     index.text("Home");
     index.prop("href", "indexEng.html");
 
-    aps.text("Apartaments");
+    aps.text("Apartments");
     aps.prop("href", "apartamentosEng.html");
 
     depo.text("Comments");
@@ -69,25 +69,26 @@ $(document).ready(function() {
     $("#translate").text("PT-BR");
   }
 
+  //Cria cookies de acordo com o location.href:
+  var urlPartida = location.href;
+  urlPartida = urlPartida.split("/");
+
+  if (urlPartida[3] == "index.html" || urlPartida[3] == "indexEng.html") {
+    setCookie("urlLocation", "index", 1);
+  }
+  else if (urlPartida[3] == "apartamentos.html" || urlPartida[3] == "apartamentosEng.html") {
+    setCookie("urlLocation", "aps", 1);
+  }
+  else if (urlPartida[3] == "depoimentos.html" || urlPartida[3] == "depoimentosEng.html") {
+    setCookie("urlLocation", "depo", 1);
+  }
+  else if (urlPartida[3] == "contato.html" || urlPartida[3] == "contatoEng.html") {
+    setCookie("urlLocation", "contato", 1);
+  }
+
   //Criam cookies de localização, quando clicados:
   linkLogo.on("click", function() {
     setCookie("urlLocation", "index", 1);
-  });
-
-  index.on("click", function() {
-    setCookie("urlLocation", "index", 1);
-  });
-
-  aps.on("click", function() {
-    setCookie("urlLocation", "aps", 1);
-  });
-
-  depo.on("click", function() {
-    setCookie("urlLocation", "depo", 1);
-  });
-
-  contato.on("click", function() {
-    setCookie("urlLocation", "contato", 1);
   });
 
   //Eventos q ue ocorrem ao clicar no btn translate
