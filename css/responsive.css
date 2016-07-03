@@ -139,10 +139,13 @@
   .room-thumb .main h5 {
   	padding: 0 10px;
   	font-size: 12px;
-    overflow: hidden;
     width: 155px;
-    white-space: nowrap;
   }
+
+  .room-thumb .main h5.word-wrap{
+    margin-top: 3px;  
+  }
+
   .room-thumb .main .price {
   	padding: 10px;
   	font-size: 12px;
@@ -189,6 +192,9 @@
 /* Extra small devices(phones)
 -------------------------------------------------- */
 @media (max-width: 767px) {
+  .social-rodape{
+    font-size: 19px; top: 3px;
+  }
   .box-icon p{
     padding: 0px 50px 40px 50px;
   }
@@ -205,7 +211,7 @@
     display: block;
   }
   .airbnb-responsive img{
-    width: 20px; float: left; position: relative; top: 4px;
+    width: 20px; float: left; position: relative; top: 6px;
   }
   body {
   	font-size: 13px;

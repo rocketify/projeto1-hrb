@@ -251,9 +251,17 @@ div #extras {
 }
 
 .social-rodape{
-  font-size: 18px; margin-left: 10px; position: relative; top: 2px;
+  font-size: 24px; margin-left: 10px; position: relative; top: -2px;
 }
 
 .copy, .rocketify{
   padding-top: 5px;
+}
+
+a.airbnb {
+  position: relative; top: -6px;
+}
+
+.fb-share-button{
+  margin-left: 20px;
 }
