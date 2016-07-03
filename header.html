@@ -75,25 +75,20 @@ $(document).ready(function() {
 
   if (urlPartida[3] == "index.html" || urlPartida[3] == "indexEng.html") {
     setCookie("urlLocation", "index", 1);
-    console.log(getCookie("urlLocation"));
   }
   else if (urlPartida[3] == "apartamentos.html" || urlPartida[3] == "apartamentosEng.html") {
     setCookie("urlLocation", "aps", 1);
-    console.log(getCookie("urlLocation"));
   }
   else if (urlPartida[3] == "depoimentos.html" || urlPartida[3] == "depoimentosEng.html") {
     setCookie("urlLocation", "depo", 1);
-    console.log(getCookie("urlLocation"));
   }
   else if (urlPartida[3] == "contato.html" || urlPartida[3] == "contatoEng.html") {
     setCookie("urlLocation", "contato", 1);
-    console.log(getCookie("urlLocation"));
   }
 
   //Criam cookies de localização, quando clicados:
   linkLogo.on("click", function() {
     setCookie("urlLocation", "index", 1);
-    console.log(getCookie("urlLocation"));
   });
 
   //Eventos q ue ocorrem ao clicar no btn translate
