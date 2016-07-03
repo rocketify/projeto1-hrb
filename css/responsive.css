@@ -37,6 +37,9 @@
   .boxed .navbar .container {
   	margin: 0;
   }
+  .fb-share-button.responsive{
+    display: none;
+  }
 
 }
 /* Medium Devices
@@ -192,8 +195,12 @@
 /* Extra small devices(phones)
 -------------------------------------------------- */
 @media (max-width: 767px) {
-  .fb-share-button{
-    top: 3px;
+  .fb-share-button.desktop{
+    display: none !important;
+  }
+  .fb-share-button.responsive{
+    top: 10px;
+    display: block;
   }
   .social-rodape{
     font-size: 19px; top: 3px;

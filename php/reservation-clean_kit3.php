@@ -5,7 +5,7 @@ if(!$_POST) exit;
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 
-$name = $_POST['name'];
+$name = ucwords($_POST['name']);ucwords($_POST['name']);
 $telefone = $_POST['telefone'];
 $email    = $_POST['email'];
 $guests = $_POST['guests'];
@@ -51,7 +51,7 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 /* resposta automática */
 
-$nome2 = $_POST['name'];
+$nome2 = ucwords($_POST['name']);
 $email2 = $_POST['email'];
 $telefone2 = $_POST['telefone'];
 $guests2 = $_POST['guests'];

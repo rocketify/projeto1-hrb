@@ -5,7 +5,7 @@ $para = "contato@hospedagemriobrasil.com";
 
 //campos
 
-$nome = $_POST['name'];
+$nome = ucwords($_POST['name']);ucwords($_POST['name']);
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $subject = $_POST['subject'];
@@ -29,7 +29,7 @@ mail($para, "[".$subject."] Contato via Site", $mensagem, $headers);
 
 
 //campos
-$nome2 = $_POST['name'];
+$nome2 = ucwords($_POST['name']);
 $email2 = $_POST['email'];
 
 $from2 = "contato@hospedagemriobrasil.com";
