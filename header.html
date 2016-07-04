@@ -85,6 +85,42 @@ $(document).ready(function() {
   else if (urlPartida[3] == "contato.html" || urlPartida[3] == "contatoEng.html") {
     setCookie("urlLocation", "contato", 1);
   }
+  else if (urlPartida[3] == "ap_barra_mar.html" || urlPartida[3] == "ap_barra_marEng.html") {
+    setCookie("urlLocation", "ap1", 1);
+  }
+  else if (urlPartida[3] == "ap_clean_copacabana_kit1.html" || urlPartida[3] == "ap_clean_copacabana_kit1Eng.html") {
+    setCookie("urlLocation", "ap2", 1);
+  }
+  else if (urlPartida[3] == "ap_clean_copacabana_kit2.html" || urlPartida[3] == "ap_clean_copacabana_kit2Eng.html") {
+    setCookie("urlLocation", "ap3", 1);
+  }
+  else if (urlPartida[3] == "ap_clean_copacabana_kit3.html" || urlPartida[3] == "ap_clean_copacabana_kit3Eng.html") {
+    setCookie("urlLocation", "ap4", 1);
+  }
+  else if (urlPartida[3] == "ap_copacabana_2_bedroom.html" || urlPartida[3] == "ap_copacabana_2_bedroomEng.html") {
+    setCookie("urlLocation", "ap5", 1);
+  }
+  else if (urlPartida[3] == "ap_copacabana_charmoso.html" || urlPartida[3] == "ap_copacabana_charmosoEng.html") {
+    setCookie("urlLocation", "ap6", 1);
+  }
+  else if (urlPartida[3] == "ap_copacabana_mar.html" || urlPartida[3] == "ap_copacabana_marEng.html") {
+    setCookie("urlLocation", "ap7", 1);
+  }
+  else if (urlPartida[3] == "ap_copacabana_santa_clara.html" || urlPartida[3] == "ap_copacabana_santa_claraEng.html") {
+    setCookie("urlLocation", "ap8", 1);
+  }
+  else if (urlPartida[3] == "ap_golden_mar.html" || urlPartida[3] == "ap_golden_marEng.html") {
+    setCookie("urlLocation", "ap9", 1);
+  }
+  else if (urlPartida[3] == "ap_ipanema_charmoso.html" || urlPartida[3] == "ap_ipanema_charmosoEng.html") {
+    setCookie("urlLocation", "ap10", 1);
+  }
+  else if (urlPartida[3] == "ap_queen_mar.html" || urlPartida[3] == "ap_queen_marEng.html") {
+    setCookie("urlLocation", "ap11", 1);
+  }
+  else if (urlPartida[3] == "ap_rhr_vista_mar.html" || urlPartida[3] == "ap_rhr_vista_marEng.html") {
+    setCookie("urlLocation", "ap12", 1);
+  }
 
   //Criam cookies de localização, quando clicados:
   linkLogo.on("click", function() {
@@ -141,6 +177,114 @@ $(document).ready(function() {
       }
       else {
         location.href = "contato.html";
+      }
+    }
+
+    if (urlLocation === "ap1") {
+      if (language === "eng") {
+        location.href = "ap_barra_marEng.html";
+      }
+      else {
+        location.href = "ap_barra_mar.html";
+      }
+    }
+
+    if (urlLocation === "ap2") {
+      if (language === "eng") {
+        location.href = "ap_clean_copacabana_kit1Eng.html";
+      }
+      else {
+        location.href = "ap_clean_copacabana_kit1.html";
+      }
+    }
+
+    if (urlLocation === "ap3") {
+      if (language === "eng") {
+        location.href = "ap_clean_copacabana_kit2Eng.html";
+      }
+      else {
+        location.href = "ap_clean_copacabana_kit2.html";
+      }
+    }
+
+    if (urlLocation === "ap4") {
+      if (language === "eng") {
+        location.href = "ap_clean_copacabana_kit3Eng.html";
+      }
+      else {
+        location.href = "ap_clean_copacabana_kit3.html";
+      }
+    }
+
+    if (urlLocation === "ap5") {
+      if (language === "eng") {
+        location.href = "ap_copacabana_2_bedroom.html";
+      }
+      else {
+        location.href = "ap_copacabana_2_bedroom.html";
+      }
+    }
+
+    if (urlLocation === "ap6") {
+      if (language === "eng") {
+        location.href = "ap_copacabana_charmosoEng.html";
+      }
+      else {
+        location.href = "ap_copacabana_charmoso.html";
+      }
+    }
+
+    if (urlLocation === "ap7") {
+      if (language === "eng") {
+        location.href = "ap_copacabana_marEng.html";
+      }
+      else {
+        location.href = "ap_copacabana_mar.html";
+      }
+    }
+
+    if (urlLocation === "ap8") {
+      if (language === "eng") {
+        location.href = "ap_copacabana_santa_claraEng.html";
+      }
+      else {
+        location.href = "ap_copacabana_santa_clara.html";
+      }
+    }
+
+    if (urlLocation === "ap9") {
+      if (language === "eng") {
+        location.href = "ap_golden_marEng.html";
+      }
+      else {
+        location.href = "ap_golden_mar.html";
+      }
+    }
+
+    if (urlLocation === "ap10") {
+      if (language === "eng") {
+        location.href = "ap_ipanema_charmosoEng.html";
+      }
+      else {
+        location.href = "ap_ipanema_charmoso.html";
+      }
+    }
+
+    if (urlLocation === "ap11") {
+      if (language === "eng") {
+        location.href = "ap_queen_marEng.html";
+      }
+      else {
+        location.href = "ap_queen_mar.html";
+      }
+    }
+
+    if (urlLocation === "ap12") {
+      if (language === "eng") {
+        location.href = "ap_rhr_vista_marEng.html";
+      }
+      else {
+        location.href = "ap_rhr_vista_mar.html";
       }
     }
 
