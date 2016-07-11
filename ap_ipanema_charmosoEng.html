@@ -57,13 +57,12 @@
   <!--  fb share -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6";
-  fjs.parentNode.insertBefore(js, fjs);
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
-
 
   <!-- Header -->
   <header id="header"></header>
@@ -299,34 +298,34 @@
 
       <!-- Map -->
       <script type="text/javascript">
-        jQuery(document).ready(function () {
-          if (jQuery().gMap) {
-              jQuery('#map').gMap({
-                  zoom: 15, //Integer: Level of zoom in to the map
-                  markers: [{
-                      address: "R. Barão da Torre, 19 - Ipanema, Rio de Janeiro - RJ", //Address of the company
-                      html: "<h4>Ipanema Charmoso</h4><p>Approximate Location of the apartment</p>", //Quicktip
-                      popup: false, //Boolean
-                      scrollwheel: false, //Boolean
-                      maptype: 'TERRAIN', //Choose between: 'HYBRID', 'TERRAIN', 'SATELLITE' or 'ROADMAP'.
-                      icon: {
-                          image: "images/ui/gmap-icon.png",
-                          iconsize: [42, 53],
-                          iconanchor: [12, 46]
-                      },
+      jQuery(document).ready(function () {
+        if (jQuery().gMap) {
+          jQuery('#map').gMap({
+            zoom: 15, //Integer: Level of zoom in to the map
+            markers: [{
+              address: "R. Barão da Torre, 19 - Ipanema, Rio de Janeiro - RJ", //Address of the company
+              html: "<h4>Ipanema Charmoso</h4><p>Approximate Location of the apartment</p>", //Quicktip
+              popup: false, //Boolean
+              scrollwheel: false, //Boolean
+              maptype: 'TERRAIN', //Choose between: 'HYBRID', 'TERRAIN', 'SATELLITE' or 'ROADMAP'.
+              icon: {
+                image: "images/ui/gmap-icon.png",
+                iconsize: [42, 53],
+                iconanchor: [12, 46]
+              },
 
-                      controls: {
-                          panControl: false, //Boolean
-                          zoomControl: false, //Boolean
-                          mapTypeControl: true, //Boolean
-                          scaleControl: true, //Boolean
-                          streetViewControl: true, //Boolean
-                          overviewMapControl: false //Boolean
-                      }
-                  }]
-              });
-          }
-        });
+              controls: {
+                panControl: false, //Boolean
+                zoomControl: false, //Boolean
+                mapTypeControl: true, //Boolean
+                scaleControl: true, //Boolean
+                streetViewControl: true, //Boolean
+                overviewMapControl: false //Boolean
+              }
+            }]
+          });
+        }
+      });
       </script>
 
       <!-- Room Content -->
@@ -335,8 +334,8 @@
           <div class="row">
             <div class="col-sm-12 col-md-7 mt50">
               <h2 class="lined-heading"><span>Details</span></h2>
-              <h3 class="mt50">Apartment Ipanema Charmoso <div class="fb-share-button desktop" data-href="http://www.hospedagemriobrasil.com/ap_ipanema_charmosoEng.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.hospedagemriobrasil.com%2Fap_ipanema_charmoso.html&amp;src=sdkpreparse">Share</a></div></h3>
-              <div class="fb-share-button responsive" data-href="http://www.hospedagemriobrasil.com/ap_ipanema_charmosoEng.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.hospedagemriobrasil.com%2Fap_ipanema_charmoso.html&amp;src=sdkpreparse">Share</a></div>
+              <h3 class="mt50">Apartment Ipanema Charmoso <div class="fb-share-button desktop" data-href="http://www.hospedagemriobrasil.com/ap_ipanema_charmosoEng.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.hospedagemriobrasil.com%2Fap_ipanema_charmosoEng.html&amp;src=sdkpreparse">Share</a></div></h3>
+              <div class="fb-share-button responsive" data-href="http://www.hospedagemriobrasil.com/ap_ipanema_charmosoEng.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.hospedagemriobrasil.com%2Fap_ipanema_charmosoEng.html&amp;src=sdkpreparse">Share</a></div>
               <table class="table table-striped mt30">
                 <tbody>
                   <tr>
@@ -356,7 +355,7 @@
                   </tr>
                   <tr>
                     <td><i class="fa fa-check-circle"></i>Beds: 7</td>
-                    <td><i class="fa fa-check-circle"></i>Pets</td>
+                    <td><i class="fa fa-check-circle"></i>Allow Pets</td>
                     <td><i class="fa fa-check-circle"></i>Accessibility</td>
                   </tr>
                 </tbody>
@@ -366,30 +365,30 @@
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>Description</h4>
                   <p>
-                    Conforto, simplicidade e tranquilidade
-                    Todas essas caracteristicas no melhor bairro do Rio de Janeiro,
-                    Ipanema. O apartamento fica em uma rua tranquila e residencial,
-                    é silencioso, claro, arejado, limpo e acomoda confortavelmente até 7 adultos e
-                    uma criança.
+                    Comfort, simplicity and tranquility
+                    All of these characteristics in the best neighborhood of Rio de Janeiro,
+                    Ipanema. The apartment is in a quiet residential street,
+                    is light, airy, clean and comfortably sleeps up to 7 adults and
+                    a child.
                   </p>
                 </div>
 
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>The Space</h4>
                   <p>
-                    Possui cozinha, 3 banheiros, 4 quartos, um com cama de casal, um com duas camas de solteiro,
-                    um com duas camas de solteiro e uma mini-cama (para crianca de até 10 anos),
-                    e outro pequeno quarto com uma cama de solteiro.
-                    Possui roupas de cama e banho de qualidade, muito limpas e cheirosas.
+                    It has kitchen, 3 bathrooms, 4 bedrooms, one with double bed,
+                    one with two single beds, one with two single beds and a mini bed
+                    (for child up to 10 years) and another small room with a single bed.
+                    It has quality bedding and towels very clean and fragrant.
                   </p>
                 </div>
 
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>Guest Access</h4>
                   <p>
-                    Além do conforto e da privacidade os hospedes terão acesso a
-                    Internet sem fio, televisão a cabo, estacionamento para um carro,
-                    vasto transporte público como metro praticamente a porta.
+                    Besides the comfort and privacy the guests will have access to
+                    Wireless Internet, cable TV, parking for one car,
+                    vast public transportation such as subway and bus.
                   </p>
                 </div>
 
@@ -403,20 +402,20 @@
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>Coming and Going</h4>
                   <p>
-                  Ofereçemos uma vaga de estacionamento sem qualquer acréscimo para os
-                  hóspedes que vem de carro ou para aqueles que desejam alugar um carro.
-                  No bairro há o metro,( praticamente a porta do apartamento), ônibus para toda a
-                  cidade e muitos táxis.
+                    We offer a parking space without any addition to the
+                    guests arriving by car or for those wishing to rent a car.
+                    In the neighborhood there is the subway (virtually near of the apartment door),
+                    bus to all city ​​and many taxis.
                   </p>
                 </div>
 
                 <div class="col-xs-12 col-sm-6 alturaDetalhes">
                   <h4>Other Comments</h4>
                   <p>
-                    Certamente você ficará muito bem hospedado no apartamento que é próximo a praia.
-                    Além do conforto, estará em um famoso bairro do Rio de Janeiro - Ipanema.
-                    Aconselhamos fazer tudo a pé em suas saídas,
-                    pois é uma diversão caminhar pelas ruas do bairro.
+                    Surely you will be fine staying at the apartment which is close to the beach.
+                    Besides the comfort, you will be in a famous district of Rio de Janeiro - Ipanema.
+                    We advise you do everything on foot on its outputs,
+                    it is a fun walk through the streets.
                   </p>
                 </div>
 
@@ -465,182 +464,182 @@
                     </li>
                     <li>
                       Do not invite strangers to attend the apartment, this is a protection for you and the other residents of the building.                    </li>
-                    <li>
-                      We do not accept pets.
-                    </li>
-                    <li>
-                      Not allowed to sleep in the hallways, waiting rooms, or any common part of the building.
-                    </li>
-                    <li>
-                      Please do not take the bath towels to the beach.
-                    </li>
-                    <li>
-                      Do not iron clothes on the beds, it may be an accident and you burn the bedding.
-                    </li>
-                    <li>
-                      Do not throw objects on the toilet, toilet paper, absorbent personal and any other item should be thrown in the trash.
-                    </li>
-                    <li>
-                      The customer must return the apartment in the same condition as it was found, and all the utensils and furniture of the place.
-                      Damage caused by the tenant or any of his guests should be repaired.
-                    </li>
+                      <li>
+                        We do not accept pets.
+                      </li>
+                      <li>
+                        Not allowed to sleep in the hallways, waiting rooms, or any common part of the building.
+                      </li>
+                      <li>
+                        Please do not take the bath towels to the beach.
+                      </li>
+                      <li>
+                        Do not iron clothes on the beds, it may be an accident and you burn the bedding.
+                      </li>
+                      <li>
+                        Do not throw objects on the toilet, toilet paper, absorbent personal and any other item should be thrown in the trash.
+                      </li>
+                      <li>
+                        The customer must return the apartment in the same condition as it was found, and all the utensils and furniture of the place.
+                        Damage caused by the tenant or any of his guests should be repaired.
+                      </li>
 
-                    <h5>Welcome and enjoy the wonderful city!!</h5>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="extras">
-                  <p>
-                    Minimum Stay: <strong>4 nights.</strong>
-                    (New Year and Carnival minimum 5 nights).
-                  </p>
-                  <p>
-                    Check-in: 03pm to 10pm.
-                  </p>
-                  <p>
-                    Check-out: 07am to 12am.
-                  </p>
-                  <p>
-                    Cleaning fee: R$ 200,00
-                  </p>
-                  <p>
-                    * If the number of people exceeds the capacity of the apartment, contact us to verify the possibility of extra allocation.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!-- Other Rooms -->
-  <section class="rooms mt50">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-sm-12">
-          <h2 class="lined-heading"><span>Other Apartments</span></h2>
-        </div>
-
-        <!-- Queen Mar -->
-        <div class="col-sm-4">
-            <div class="room-thumb"> <img src="images/apartamentos/queen_mar/queenmar1.jpg" alt="room 7" class="img-responsive" />
-            <div class="mask">
-              <div class="main">
-                <h5>Queen Mar</h5>
-                <div class="price">800 BRL<span>per day</span></div>
-              </div>
-              <div class="content">
-                <p>
-                  <span>Between the beach and the lagoon</span>
-                  With beautiful views and very well equipped. Has 3 bedrooms, lounge, pool and more. Accommodates up to 6 people.
-                </p>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-check-circle"></i>Kitchen</li>
-                      <li><i class="fa fa-check-circle"></i>Cable Tv</li>
-                      <li><i class="fa fa-check-circle"></i>Parking</li>
-                      <li><i class="fa fa-check-circle"></i>Wifi</li>
+                      <h5>Welcome and enjoy the wonderful city!!</h5>
                     </ul>
                   </div>
-                  <div class="col-xs-6">
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-check-circle"></i>Elevator</li>
-                      <li><i class="fa fa-check-circle"></i>Pool</li>
-                      <li><i class="fa fa-check-circle"></i>Gym</li>
-                      <li><i class="fa fa-check-circle"></i>Access <i class="fa fa-wheelchair" aria-hidden="true"></i></li>
-                    </ul>
+                  <div class="tab-pane fade" id="extras">
+                    <p>
+                      Minimum Stay: <strong>4 nights.</strong>
+                      (New Year and Carnival minimum 5 nights).
+                    </p>
+                    <p>
+                      Check-in: 03pm to 10pm.
+                    </p>
+                    <p>
+                      Check-out: 07am to 12am.
+                    </p>
+                    <p>
+                      Cleaning fee: R$ 200,00
+                    </p>
+                    <p>
+                      * If the number of people exceeds the capacity of the apartment, contact us to verify the possibility of extra allocation.
+                    </p>
                   </div>
                 </div>
-                <a href="ap_queen_marEng.html" class="btn btn-primary btn-block">see apartment</a>
+
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- RHR Vista Mar -->
-        <div class="col-sm-4">
-          <div class="room-thumb"> <img src="images/apartamentos/rhr_vista_mar/rhr1.jpg" alt="room 8" class="img-responsive" />
-            <div class="mask">
-              <div class="main">
-                <h5>RHR Vista Mar</h5>
-                <div class="price">380 BRL<span>per day</span></div>
-              </div>
-              <div class="content">
-                <p><span>It has wonderful views of the sea and lagoon</span>Privacy and comfort in a great location. Accommodates up to 6 people.</p>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-check-circle"></i>Kitchen</li>
-                      <li><i class="fa fa-check-circle"></i>Cable Tv</li>
-                      <li><i class="fa fa-check-circle"></i>Air Conditioning</li>
-                      <li><i class="fa fa-check-circle"></i>Wifi</li>
-                    </ul>
-                  </div>
-                  <div class="col-xs-6">
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-check-circle"></i>Elevator</li>
-                      <li><i class="fa fa-check-circle"></i>Pool</li>
-                      <li><i class="fa fa-check-circle"></i>Gym</li>
-                      <li><i class="fa fa-check-circle"></i>Parking</li>
-                    </ul>
-                  </div>
-                </div>
-                <a href="ap_rhr_vista_marEng.html" class="btn btn-primary btn-block">see apartment</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Barra Mar -->
-        <div class="col-sm-4">
-          <div class="room-thumb"> <img src="images/apartamentos/barra_mar/barra1.jpg" alt="Barra Mar" class="img-responsive" />
-            <div class="mask">
-              <div class="main">
-                <h5>Barra Mar</h5>
-                <div class="price">290 BRL<span>per day</span></div>
-              </div>
-              <div class="content">
-                <p>
-                  <span>Beautiful view of the sea and mountains</span>
-                  Excellent location near the beach, great bars, restaurants and clubs! Accommodates up to 3 people.
-                </p>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-check-circle"></i>Kitchen</li>
-                      <li><i class="fa fa-check-circle"></i>Air Conditioning</li>
-                      <li><i class="fa fa-check-circle"></i>Wifi</li>
-                      <li><i class="fa fa-check-circle"></i>Cable Tv</li>
-                    </ul>
-                  </div>
-                  <div class="col-xs-6">
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-check-circle"></i>Elevator</li>
-                      <li><i class="fa fa-check-circle"></i>Pool</li>
-                      <li><i class="fa fa-check-circle"></i>Gym</li>
-                      <li><i class="fa fa-check-circle"></i>Parking</li>
-                    </ul>
-                  </div>
-                </div>
-                <a href="ap_barra_marEng.html" class="btn btn-primary btn-block">see apartment</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        </section>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer id="footer"></footer>
+    <!-- Other Rooms -->
+    <section class="rooms mt50">
+      <div class="container">
+        <div class="row">
 
-  <!-- Go-top Button -->
-  <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+          <div class="col-sm-12">
+            <h2 class="lined-heading"><span>Other Apartments</span></h2>
+          </div>
 
-</body>
-</html>
+          <!-- Queen Mar -->
+          <div class="col-sm-4">
+            <div class="room-thumb"> <img src="images/apartamentos/queen_mar/queenmar1.jpg" alt="room 7" class="img-responsive" />
+              <div class="mask">
+                <div class="main">
+                  <h5>Queen Mar</h5>
+                  <div class="price">800 BRL<span>per day</span></div>
+                </div>
+                <div class="content">
+                  <p>
+                    <span>Between the beach and the lagoon</span>
+                    With beautiful views and very well equipped. Has 3 bedrooms, lounge, pool and more. Accommodates up to 6 people.
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check-circle"></i>Kitchen</li>
+                        <li><i class="fa fa-check-circle"></i>Cable Tv</li>
+                        <li><i class="fa fa-check-circle"></i>Parking</li>
+                        <li><i class="fa fa-check-circle"></i>Wifi</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check-circle"></i>Elevator</li>
+                        <li><i class="fa fa-check-circle"></i>Pool</li>
+                        <li><i class="fa fa-check-circle"></i>Gym</li>
+                        <li><i class="fa fa-check-circle"></i>Access <i class="fa fa-wheelchair" aria-hidden="true"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="ap_queen_marEng.html" class="btn btn-primary btn-block">see apartment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RHR Vista Mar -->
+          <div class="col-sm-4">
+            <div class="room-thumb"> <img src="images/apartamentos/rhr_vista_mar/rhr1.jpg" alt="room 8" class="img-responsive" />
+              <div class="mask">
+                <div class="main">
+                  <h5>RHR Vista Mar</h5>
+                  <div class="price">380 BRL<span>per day</span></div>
+                </div>
+                <div class="content">
+                  <p><span>It has wonderful views of the sea and lagoon</span>Privacy and comfort in a great location. Accommodates up to 6 people.</p>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check-circle"></i>Kitchen</li>
+                        <li><i class="fa fa-check-circle"></i>Cable Tv</li>
+                        <li><i class="fa fa-check-circle"></i>Air Conditioning</li>
+                        <li><i class="fa fa-check-circle"></i>Wifi</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check-circle"></i>Elevator</li>
+                        <li><i class="fa fa-check-circle"></i>Pool</li>
+                        <li><i class="fa fa-check-circle"></i>Gym</li>
+                        <li><i class="fa fa-check-circle"></i>Parking</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="ap_rhr_vista_marEng.html" class="btn btn-primary btn-block">see apartment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barra Mar -->
+          <div class="col-sm-4">
+            <div class="room-thumb"> <img src="images/apartamentos/barra_mar/barra1.jpg" alt="Barra Mar" class="img-responsive" />
+              <div class="mask">
+                <div class="main">
+                  <h5>Barra Mar</h5>
+                  <div class="price">290 BRL<span>per day</span></div>
+                </div>
+                <div class="content">
+                  <p>
+                    <span>Beautiful view of the sea and mountains</span>
+                    Excellent location near the beach, great bars, restaurants and clubs! Accommodates up to 3 people.
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check-circle"></i>Kitchen</li>
+                        <li><i class="fa fa-check-circle"></i>Air Conditioning</li>
+                        <li><i class="fa fa-check-circle"></i>Wifi</li>
+                        <li><i class="fa fa-check-circle"></i>Cable Tv</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check-circle"></i>Elevator</li>
+                        <li><i class="fa fa-check-circle"></i>Pool</li>
+                        <li><i class="fa fa-check-circle"></i>Gym</li>
+                        <li><i class="fa fa-check-circle"></i>Parking</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="ap_barra_marEng.html" class="btn btn-primary btn-block">see apartment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Go-top Button -->
+    <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+
+  </body>
+  </html>
