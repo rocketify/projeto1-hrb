@@ -226,6 +226,10 @@ div #extras {
 
 /* prettyPhoto styling for medium screens  - below 1169px width */
 @media only screen and (min-width: 768px) and (max-width: 1169px) {
+  .room-thumb .main .price {
+    font-size: 10px!important;
+  }
+
   .pp_pic_holder.pp_default {margin: 0 15%!important; width: 70%!important; left: 0!important; overflow: hidden; }
   div.pp_default .pp_content_container .pp_left { padding-left: 0!important; }
   div.pp_default .pp_content_container .pp_right { padding-right: 0!important; }
