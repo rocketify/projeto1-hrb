@@ -5,6 +5,7 @@ if(!$_POST) exit;
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 
+$apartament = ($_POST['apartament']);
 $name = ucwords($_POST['name']);
 $telefone = $_POST['telefone'];
 $email    = $_POST['email'];
@@ -14,9 +15,9 @@ $checkout    = $_POST['checkout'];
 
 $address = "contato@hospedagemriobrasil.com";
 
-$e_subject = '[Copacabana Charmoso] Solicitação de reserva';
+$e_subject = '['.$apartament.'] Solicitação de reserva';
 
-$e_body = "Boas notícias! Você recebeu uma solicitação de reserva para o apartamento Clean Copacabana Charmoso.
+$e_body = "Boas notícias! Você recebeu uma solicitação de reserva para o apartamento $apartament.
 
 São $guests para se hospedar entre $checkin e $checkout." . PHP_EOL . PHP_EOL;
 
@@ -30,24 +31,11 @@ Entre em contato com ele para fechar negócio.";
 
 $msg = wordwrap( $e_body . $e_reply, 70 );
 
-$headers = "From: $email" . PHP_EOL;
+$headers = "From: $address" . PHP_EOL;
 $headers .= "Reply-To: $email" . PHP_EOL;
 $headers .= "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
 $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
-
-if(mail($address, $e_subject, $msg, $headers)) {
-
-	// Email has sent successfully, echo a success page.
-
-	echo "<script>alert('Solicitação de reserva enviada!');</script>";
-	echo "<script>window.location.assign('../ap_copacabana_charmoso.html');</script>";
-
-} else {
-
-	echo 'ERROR!';
-
-}
 
 /* resposta automática */
 
@@ -73,26 +61,11 @@ possível.
 
 Aproveite para conferir seus dados:
 
-Apartamento: Copacabana Charmoso
+Apartamento: $apartament
 Telefone: $telefone2
 Hóspedes: $guests2
 Checkin: $checkin2
-Checkout: $checkout2
-
-==========================================
-
-
-We have received your reservation request.
-
-We will analyze it and we will be getting in touch as soon as possible.
-
-Take the opportunity to check your data:
-
-Apartment: Copacabana Charmoso
-Phone: $telefone2
-Guests: $guests2
-Checkin: $checkin2
-Checkout: $checkout2"  . PHP_EOL . PHP_EOL;
+Checkout: $checkout2" . PHP_EOL . PHP_EOL;
 
 $e_reply2 = "Att, Hospedagem Rio Brasil.";
 
@@ -105,4 +78,15 @@ $headers2 .= "MIME-Version: 1.0" . PHP_EOL;
 $headers2 .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
 $headers2 .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
-mail($email2, $e_subject2, $msg2, $headers2);
+if((mail($address, $e_subject, $msg, $headers)) && (mail($email2, $e_subject2, $msg2, $headers2))) {
+
+	// Email has sent successfully, echo a success page.
+
+	echo "<script>alert('Solicitação de reserva enviada!');</script>";
+	echo "<script>window.location.assign('../index.html');</script>";
+
+} else {
+
+	echo 'ERROR!';
+
+}
