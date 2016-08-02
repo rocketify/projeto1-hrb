@@ -960,7 +960,7 @@ header #logo {
 	height: 55px;
 }
 .room-thumb .main h5 {
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: bold;
 	position: relative;
 	padding: 10px 0 0 20px;
@@ -969,7 +969,7 @@ header #logo {
 .room-thumb .main .price {
 	display: inline;
 	float: right;
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: bold;
 	height: 55px;
 	padding: 6px 25px;
