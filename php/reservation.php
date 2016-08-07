@@ -13,7 +13,7 @@ $guests = $_POST['guests'];
 $checkin    = $_POST['checkin'];
 $checkout    = $_POST['checkout'];
 
-$address = "contato@hospedagemriobrasil.com";
+$address = "telmaapartamentosrio@gmail.com";
 
 $e_subject = '['.$apartament.'] Solicitação de reserva';
 
