@@ -26,7 +26,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-  //Declração de variáveis com os objetos JQuery dos links:
+  //Declaração de variáveis com os objetos JQuery dos links:
   var linkLogo = $("#linkLogo");
   var index = $("#index");
   var aps = $("#aps");
@@ -121,13 +121,16 @@ $(document).ready(function() {
   else if (urlPartida[3] == "ap_rhr_vista_mar.html" || urlPartida[3] == "ap_rhr_vista_marEng.html") {
     setCookie("urlLocation", "ap12", 1);
   }
+  else if (urlPartida[3] == "ap_ipanema_charmoso_2_bedroom.html" || urlPartida[3] == "ap_ipanema_charmoso_2_bedroomEng.html") {
+    setCookie("urlLocation", "ap13", 1);
+  }
 
   //Criam cookies de localização, quando clicados:
   linkLogo.on("click", function() {
     setCookie("urlLocation", "index", 1);
   });
 
-  //Eventos q ue ocorrem ao clicar no btn translate
+  //Eventos que ocorrem ao clicar no btn translate
   $("#translate").on("click", function(){
     var translate = $(this);
     var language = getCookie("language");
@@ -285,6 +288,15 @@ $(document).ready(function() {
       }
       else {
         location.href = "ap_rhr_vista_mar.html";
+      }
+    }
+
+    if (urlLocation === "ap13") {
+      if (language === "eng") {
+        location.href = "ap_ipanema_charmoso_2_bedroomEng.html";
+      }
+      else {
+        location.href = "ap_ipanema_charmoso_2_bedroom.html";
       }
     }
 
