@@ -5,10 +5,10 @@ if(!$_POST) exit;
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 
-$apartament = ($_POST['apartament']);
-$name = ucwords($_POST['name']);
-$telefone = $_POST['telefone'];
-$email    = $_POST['email'];
+$apartament = str_replace(' ', '', $_POST['apartament']);
+$name = str_replace(' ', '', ucwords($_POST['name']));
+$telefone = str_replace(' ', '', $_POST['telefone']);
+$email    = str_replace(' ', '', $_POST['email']);
 $guests = $_POST['guests'];
 $checkin    = $_POST['checkin'];
 $checkout    = $_POST['checkout'];
@@ -39,9 +39,9 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
 /* resposta automática */
 
-$nome2 = ucwords($_POST['name']);
-$email2 = $_POST['email'];
-$telefone2 = $_POST['telefone'];
+$nome2 = str_replace(' ', '', ucwords($_POST['name']));
+$email2 = str_replace(' ', '', $_POST['email']);
+$telefone2 = str_replace(' ', '', $_POST['telefone']);
 $guests2 = $_POST['guests'];
 $checkin2    = $_POST['checkin'];
 $checkout2    = $_POST['checkout'];
@@ -77,15 +77,13 @@ $headers2 .= "MIME-Version: 1.0" . PHP_EOL;
 $headers2 .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
 $headers2 .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
-if((mail($address, $e_subject, $msg, $headers)) && (mail($email2, $e_subject2, $msg2, $headers2))) {
-
-	// Email has sent successfully, echo a success page.
-
-	echo "<script>alert('Booking Request Send!');</script>";
+if(($apartament == '') || ($name == '') || ($telefone == '') || ($email == '')){
+	echo "<script>alert('Ocorreu um ERRO com o envio do formulário!');</script>";
 	echo "<script>window.location.assign('../index.html');</script>";
-
 } else {
+	mail($address, $e_subject, $msg, $headers);
+	mail($email2, $e_subject2, $msg2, $headers2);
 
-	echo 'ERROR!';
-
+	echo "<script>alert('Solicitação de reserva enviada!');</script>";
+	echo "<script>window.location.assign('../index.html');</script>";
 }
